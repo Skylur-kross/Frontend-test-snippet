@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  function sum(a, b) {
+    const result = a + b;
+    return result;
+  }
+
+  function onboardFlight(ticket, gotDocument, lagguage) {
+    // Main gate check
+    if (!ticket || !gotDocument) {
+      return;
+    }
+
+    // Getting a boarding pass
+    if (!isMatching(ticket) || !gotDocument) {
+      return;
+    }
+
+    const boardingPass = issueBoardingPass(ticket, gotDocument);
+
+    // Personal & baggage checking
+    if (!verifyTicket(boardingPass) || !verifyLagguage(lagguage)) {
+      return;
+    }
+  }
+
+  function tryMe() {
+    let a = 10;
+    const b = 20;
+
+    return b;
+
+    console.log(a);
+    console.log(b);
+  }
+
+  tryMe();
+
+  console.log(sum(1, 3));
+  console.log(sum(10, 3));
+  console.log(sum(10, 3, 4));
+  console.log(sum(10, 30, 4));
+  console.log(sum(10));
+  console.log(sum());
+</script>
