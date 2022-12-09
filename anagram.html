@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  function checkStringsAnagram(a, b) {
+    let len1 = a.length;
+    let len2 = b.length;
+    if (len1 !== len2) {
+      console.log('False');
+      return
+    }
+    let str1 = a.split('');
+    let str2 = b.split('');
+    
+    for (i = 0; i < len1; i++) {
+      for (j = 0; j < str2.length; j++) {
+        if (str1[0] === str2[j]) {
+          str1.splice(0, 1);
+          str2.splice(j, 1);
+          break;
+        } 
+      }
+    }
+    if (str1.length === 0 && str2.length === 0){
+      console.log("true");
+
+    }
+    else{
+      console.log("false")
+    }
+  }
+  checkStringsAnagram("nittin", "tintin")
+
+</script>
+
+</html>

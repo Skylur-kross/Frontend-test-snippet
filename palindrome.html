@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Step 1: take string as input
+    step 2: store the string in an array
+    step 3: run a reverse loop 
+    Step 4: store the instances of array in other array
+    step 5: join the array back to string 
+    Step 6: compare the original string to the new string if matches then True. 
+</body>
+<script>
+    function palinDrome(str)
+    {
+        let a = str.split("");
+        var x = 0;
+        let b = [];
+        for(var i = a.length - 1 ; i >= 0 ; i--){
+            b[x] = a[i];
+            x++
+        }
+        
+        let str2 = b.join("");
+        if (str === str2){
+            console.log("true");
+        }
+        else{
+            console.log("false");
+        }
+    }
+    palinDrome("malayalam");
+</script>
+</html>

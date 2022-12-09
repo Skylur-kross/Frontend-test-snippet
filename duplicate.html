@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- step 1: split the string in an array
+    step 2: run a loop til the length of the array
+    step 3: run a second loop to check each instance of the array for duplicate occurance
+    step 4: remove that instance and store the array back as a string -->
+</body>
+<script>
+ 
+    
+    function removeDuplicate(string)
+        {
+            var str = string.split("");
+            var n = str.length;
+            var x = 0;
+     
+           
+            for (var i = 0; i < n; i++)
+            {
+     
+                var j;
+                for (j = 0; j < i; j++)
+                {
+                    if (str[i] == str[j])
+                    {
+                        break;
+                    }
+                }
+     
+                
+                if (j == i)
+                {
+                    str[x++] = str[i];
+                }
+            }
+             
+            return str.join("").slice(str, x);
+        }
+     
+        
+            
+            console.log(removeDuplicate("ankitjain"));
+         
+   
+     
+    </script>
+</html>
