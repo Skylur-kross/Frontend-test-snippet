@@ -8,18 +8,19 @@ step 4.1: if matches then it is a vowels
 step 5: if not then its a consonant. 
 **/
 
-const checkVowelOrConsonant = () => {
+const checkVowelOrConsonant = (input) => {
     // Step 1: crate an array of all the vowels
-    const input = prompt("Enter an Alphabet");
-
     const vowelstr = input;
     vowelstr.toLowerCase();
+    if(!input || typeof input !== String)
+    {
+        return "invalid input";
+    }
     if(vowelstr==="a"||vowelstr==="e"||vowelstr==="i"||vowelstr==="o"||vowelstr==="u" ){
-        document.write("It is a Vowel")
+        return "It is a Vowel";
     }
     else{
-        document.write("It is a Consonant")
+       return "It is a Consonant";
     }
 };
-document.write(checkVowelOrConsonant);
-prompt("Enter an Alphabet");
+
