@@ -10,17 +10,18 @@
     
 </body>
 <script>
-    const obj ={};
+    const obj ={data:{
+        age:"24",
+        DOB: "020398",
+        Place:"uttarakhand",
+
+    }};
     obj.name = "anirudh";
     obj.city = "pune";
     obj["state"] = "Maharashtra";
     obj[1]= "inactive";
-    data:{
-        age:"24";
-        DOB: "020398"
-        Place:"uttarakhand";
-
-    };
+    let name = Object.values(obj.data.Place)
+    console.log(name);
 
     console.log(obj);
 </script>

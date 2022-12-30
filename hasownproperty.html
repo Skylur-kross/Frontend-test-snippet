@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const profile = {
+    name: "Anirudh",
+    details: {
+      city: "Pune",
+      address: {
+        code: 120,
+      },
+    },
+    isActive: undefined,
+  };
+
+  const hasCityKey = profile.hasOwnProperty("city");
+  const hasNameKey = profile.hasOwnProperty("name");
+
+  const hasCityKeyInDetails = profile.details.hasOwnProperty("city");
+  const hasCityCodeKeyInDetails = profile.details.hasOwnProperty("code");
+
+
+  console.log({
+    hasCityKey,
+    hasNameKey,
+    hasCityKeyInDetails,
+    hasCityCodeKeyInDetails,
+    
+  });
+
+  if (profile.details.city === "Mumbai") {
+    console.log("Yes it's Mumbai");
+  } else {
+    console.log("No it's not mumbai");
+  }
+
+  console.log("IsActive: ", profile.hasOwnProperty("isActive"));
+  console.log("IsPowerful: ", profile.hasOwnProperty("isPowerful"));
+
+
+
+const profile1 = {
+    name:"anirudh",
+    details:{
+        city:"pune",
+        code : 411057,
+    },
+};
+const hasCityKey1 = profile1.hasOwnProperty("city");
+  const hasNameKey1 = profile1.hasOwnProperty("name");
+
+  const hasCityKeyInDetails1 = profile1.details.hasOwnProperty("city");
+  const hasCityCodeKeyInDetails1 = profile1.details.hasOwnProperty("code");
+ 
+
+    Object.seal(profile1);
+delete profile1.name;
+    console.log(profile1.name);
+
+
+
+</script>
