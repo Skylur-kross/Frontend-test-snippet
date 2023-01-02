@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // final way
+    let arr = [4,85,6,1,444,45,74,87,47,547,4,7,447,487,16,8,8,698];
+    let resultV1 =arr.filter((shivam)=> shivam%2===0);
+    console.log("@SY - ", resultV1);
+
+    // 2nd way
+    let resultsV2 =arr.filter((data)=>{
+        if(data>300 && data%2===0){
+            return data;
+        }
+    })
+    console.log("@SY - ",resultsV2);
+
+    let resultsV3 =arr.filter((data)=>data>300 && data%2===0);
+    console.log(resultsV3);
+
+    const profiles = [
+    {
+      name: "ankit",
+      active: true,
+    },
+    {
+      name: "ankit",
+      active: true,
+    },
+    {
+      name: "rahul",
+      active: false,
+    },
+    {
+      name: "shivam",
+      active: true,
+    },
+    {
+      name: "mitesh",
+      active: false,
+    },
+  ];
+
+  let resultsV4=profiles.filter((data)=>{
+    if(data.active===true){
+        return data;
+    }
+
+  });
+  console.log(resultsV4)
+</script>
