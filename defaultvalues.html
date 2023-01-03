@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  const profile = {
+    name: "Raja",
+    city: "Indore",
+  };
+
+  // Way 1
+  const userState = profile.state || "NA";
+
+  console.log("@AJ State: ", profile.state, userState);
+
+  const { state = "NA", city = "NA" } = profile;
+
+  console.log("@AJ D-State: ", state, city);
+</script>
