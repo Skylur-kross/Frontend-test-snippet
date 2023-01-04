@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./search.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="headersearch">
+
+            <input type="text" id="myInput" class="search" onkeyup="searchList()" title="Search here"
+                placeholder="Search for products, brands and more">
+        </div>
+    </div>
+    <div class="productstable">
+        <table class="products" id="tableproducts">
+            <tr>
+                <th>Title</th>
+                <!-- <th>Description</th>
+                <th>Catagory</th> -->
+            </tr>
+            <tbody id="products">
+
+            </tbody>
+
+        </table>
+    </div>
+
+</body>
+<script>
+    const api_url =
+        "https://fakestoreapi.com/products";
+
+    async function getapi(url) {
+        const response = await fetch(url);
+        var data = new Object()
+        data = await response.json();
+        // console.log(typeof data);
+
+        show(data);
+    }
+    // Calling that async function
+    getapi(api_url);
+    function show(data) {
+        const table = document.getElementById("products");
+        table.innerHTML = "";
+        var tr = "";
+
+
+        var details = data.map((products) => {
+            tr += '<tr class="title" >';
+            tr += '<td>' + products.title + '</td>' ;
+            // + '<td>' + products.description + '</td>' + '<td>' + products.category + '</td>'
+            tr += '</tr>'
+        });
+        table.innerHTML += tr;
+        searchList();
+    }
+    function searchList() {
+
+        var input = document.getElementById("myInput");
+        var filter = input.value.toUpperCase();
+        var table = document.getElementById("products");
+        const tableItems = table.getElementsByTagName('tr');
+        // Array.from(tableItems).filter((row)=>{ if (row)});
+
+        var Output = Array.from(tableItems).map((data) => {
+            // let i = data.className;
+            // console.log(i);
+            if (data) {
+                txtValue = data.textContent || data.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    // document.getElementsByTagName("td")[data.rowIndex].style.display = "";
+                    // console.log(data);
+                    data.style.display="";
+                } else {
+                    data.style.display = "none";
+                }
+            }
+            
+        })
+  
+    }
+</script>
+
+</html>

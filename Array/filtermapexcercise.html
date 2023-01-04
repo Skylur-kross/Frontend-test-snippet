@@ -48,6 +48,7 @@ const inputtwo = "Every developer likes to mix kubernetes and javascript";
 
 
 
+
 const inputThree = [
   {
     username: "john",
@@ -86,9 +87,14 @@ const output2 = inputThree.map(player => player.username.length);
 const output3 = inputThree.map(player => player.team.length);
 const output4 = inputThree.map(player => `Hello ${player.username} from ${player.team}`);
 const output5 = inputThree.filter(player => player.username === "susy");;
-const output6 = [inputThree.reduce((total, player) => total + player.score, 0)];
-
+const output6 = inputThree.reduce((accumulator, player) => {
+  accumulator.push({ myScore: player.score });
+  return accumulator;
+}, []);
 console.log(output1,output2,output3,output4,output5,output6);
 
 </script>
 </html>
+
+
+    
