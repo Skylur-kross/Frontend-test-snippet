@@ -14,7 +14,7 @@ getapi(api_url);
 
 function show(data) {
     const carddiv = document.getElementById("cardsdiv");
-    console.log(carddiv)
+    // console.log(carddiv)
     carddiv.innerHTML = "";
     var div = "";
     var details = data.map((products) => {
@@ -32,11 +32,15 @@ function show(data) {
         div += ' </tr>';
         div += ' </table>';
         div += ' </div>';
-        div += ' <div class="price"> $'+products.price+'</div></div>';
+        div += ' <div class="cardutil">';
+        div += '<span class="price"> $'+products.price+'</span>';
+        div += '<div class="wishlist"><img class="likeimg" id="like" onclick="wishList()" src="./favorite.png" oalt=""></div>';
+        // div =+ ';
+        div += '</div>';
         div += '</li>';
     });
     carddiv.innerHTML += div;
-   
+    
     searchList();
 }
 function searchList() {
@@ -46,7 +50,7 @@ function searchList() {
     var cards = document.getElementById("cardsdiv");
     const carddata = cards.getElementsByClassName('card');
     // Array.from(tableItems).filter((row)=>{ if (row)});
-    console.log(carddata);
+    // console.log(carddata);
         var Output = Array.from(carddata).filter((data) => {
         // let i = data.className;
         // console.log(i);
@@ -54,7 +58,7 @@ function searchList() {
             txtValue = data.textContent;
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
                 // document.getElementsByTagName("td")[data.rowIndex].style.display = "";
-                console.log(data);
+                // console.log(data);
                 data.style.display="";
             } else {
                 data.style.display = "none";
@@ -63,4 +67,14 @@ function searchList() {
         
     })
     
+    }
+    function wishList(){
+        const likedimg = document.getElementsByClassName("card");
+        // console.log(likedimg);
+        var Output = Array.from(likedimg).filter((data) => {
+            console.log(data);
+        });
+
+        document.getElementById("like").src = "./favouritefill.png";
+        
     }
