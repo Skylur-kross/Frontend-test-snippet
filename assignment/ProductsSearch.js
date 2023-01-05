@@ -31,7 +31,7 @@ var cards = document.getElementById("productspage");
 const carddata = cards.getElementsByClassName('productscard');
 // Array.from(tableItems).filter((row)=>{ if (row)});
 console.log(carddata);
-    var Output = Array.from(carddata).map((data) => {
+    var Output = Array.from(carddata).filter((data) => {
     // let i = data.className;
     // console.log(i);
     if (data) {
