@@ -21,12 +21,11 @@
 </body>
 <script>
     Array.prototype.scndLargest = function () {
-       let  inputarray = this;
-
+       
        let sndlargest = 0;
         let fstlargest = 0;
 
-        inputarray.filter((index) => {
+        this.filter((index) => {
             
             if (index > fstlargest) {
                 fstlargest = index;
