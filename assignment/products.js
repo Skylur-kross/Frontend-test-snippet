@@ -5,19 +5,19 @@ async function getapi(url) {
     const response = await fetch(url);
     var data = await response.json();
     console.log(data);
-    show(data);
+    displayProducts(data);
 }
 // Calling that async function
 getapi(api_url);
 
 // ///////////////////////////////////////////
 
-function show(data) {
+function displayProducts(data) {
     const carddiv = document.getElementById("cardsdiv");
     // console.log(carddiv)
     carddiv.innerHTML = "";
-    var div = "";
-    var details = data.map((products) => {
+    let div = "";
+    const details = data.map((products) => {
         div += '<li class="card" id="cards">';
         div += ' <div class="imgdiv">'
         div += ' <img class="cardimg" src='+products.image+' alt="">';
@@ -45,9 +45,9 @@ function show(data) {
 }
 function searchList() {
 
-    var input = document.getElementById("input");
-    var filter = input.value.toUpperCase();
-    var cards = document.getElementById("cardsdiv");
+    const input = document.getElementById("input");
+    const filter = input.value.toUpperCase();
+    const cards = document.getElementById("cardsdiv");
     const carddata = cards.getElementsByClassName('card');
     // Array.from(tableItems).filter((row)=>{ if (row)});
     // console.log(carddata);
