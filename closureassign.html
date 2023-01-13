@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function initCart() {
+        let a = {};
+        let index = 0;
+        function inner(obj1) {
+            index += 1;
+            a[index] = obj1;
+            return a;
+        }
+        return inner;
+    }
+
+    const myBasket = initCart()
+    console.log(myBasket({ id: 1, name: 'dabar hair oil' }));
+    console.log( myBasket({ id: 10, name: 'milk rusk' }));
+    
+</script>
+
+</html>

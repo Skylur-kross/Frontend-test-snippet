@@ -1,0 +1,278 @@
+body {
+    margin: 0px;
+}
+
+.headercont {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    padding: 10px;
+    box-shadow: 10px 2px 8px #f0f0f0;
+}
+
+/* ////////////////////////////////////////////LOGO//////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////// */
+
+
+.logoimg {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    border-radius: 40%;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////HEADER MENU//////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.menu {
+    display: flex;
+    gap: 20px;
+    justify-content: baseline;
+    /* margin-right: 20px; */
+}
+
+.headermenu a {
+    /* font-weight: 400px; */
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: rgb(61, 61, 61);
+    text-transform: uppercase;
+
+}
+
+.headermenu {
+    /* margin: auto; */
+    padding: 10px;
+}
+
+.headermenu h3:hover {
+    border-bottom: 5px solid crimson;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////LOGIN BUTTON//////////////////////////////////////////////////// */
+.headerbutton button {
+
+    font-size: 12px;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(255, 254, 254);
+    text-transform: uppercase;
+
+}
+
+.headerbutton {
+    margin: auto;
+    padding: 10px;
+
+}
+
+.headerbutton button {
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    background-color: black;
+    border-radius: 50%;
+}
+.hamburger{
+    display: none;
+}
+@media (max-width: 780px)  {
+
+    .headermenu{
+        display: none;
+    }
+    .hamburger{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #btncontrol{
+        display: none;
+    }
+    #btnControl:checked + label > img {
+        width: 70px;
+        height: 74px;
+    }
+    
+    
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////PRODUCT SEARCH////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.searchcont {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.searchdiv {
+    width: 300px;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: #f5f5f6;
+    border-radius: 5px;
+    font-size: 12px;
+    font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
+    color: rgb(142, 139, 139);
+}
+
+.productsearch {
+    width: 90%;
+    height: 25px;
+    background: transparent;
+    border: none;
+    outline-width: 0;
+    font: inherit;
+    padding: 8px 10px 10px;
+}
+
+.svg {
+    padding: 10px;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////PRODUCTS //////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.products {
+    display: flex;
+
+}
+
+.filter {
+    flex-grow: 1;
+
+}
+
+.productcards {
+    flex-grow: 4;
+}
+
+
+
+@media (min-width: 1200px) {
+    .cardsdiv {
+        padding-top: 20px;
+        border-top: 1px solid #e6e6e7;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        gap: 50px;
+        list-style-type: none;
+    }
+    .menu{
+        margin-right: 50px;
+    }
+
+}
+
+@media (min-width: 1030px) and (max-width: 1199.99px) {
+    .cardsdiv {
+        display: grid;
+        grid-template-columns:  auto auto auto auto;
+        gap: 40px;
+        list-style-type: none;
+    }
+    .menu{
+        margin-right: 50px;
+    }  
+    
+
+}
+@media (min-width: 730px) and (max-width: 1029.99px ) {
+    .cardsdiv {
+        display: grid;
+        grid-template-columns:  auto auto auto;
+        gap: 20px;
+        list-style-type: none;
+    }  
+}
+    @media (min-width: 400px) and (max-width: 729.99px ) {
+        .cardsdiv {
+            display: grid;
+            grid-template-columns:  auto auto;
+            gap: 20px;
+            list-style-type: none;
+        }  
+
+}
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////CARDS//////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.card {
+    width: 210px;
+    box-shadow: 10px 2px 8px #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    border-radius: 5px;
+}
+.data{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    height: 45%;
+}
+
+.imgdiv{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}
+.cardimg {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+.datatable {
+    padding-left: 10px;
+    margin-top: 10px;
+    font-size: 12px;
+    font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
+    /* color: rgb(142, 139, 139); */
+    flex-grow: 1;
+}
+
+.productcatagory {
+    color: rgb(52, 51, 51);
+}
+
+.producttitle {
+    font-size: 11px;
+    color: rgb(52, 51, 51);
+}
+.cardutil{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 10px;
+    /* height: ; */
+    
+    
+}
+.wishlist{
+    height: 18px;
+}
+.likeimg{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+.price{
+    
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
+    color: rgb(163, 95, 95);
+    padding-bottom: 10px;
+}

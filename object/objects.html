@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const profile = {
+    name: "Mitesh",
+    city: "Mumbai",
+    state: "Maharashtra",
+    company: "TCS",
+  };
+
+  const keys = Object.keys(profile);
+  console.log("Keys: ", keys, keys.length);
+
+  if (Object.keys(profile).length === 0) {
+    console.log("Object profile is empty");
+  } else {
+    console.log("Object profile is not empty");
+  }
+
+  const newProfile = {};
+
+  const keys2 = Object.keys(newProfile);
+  console.log("keys2: ", keys2, keys2.length);
+
+  if (Object.keys(newProfile).length === 0) {
+    console.log("Object newProfile is empty");
+  } else {
+    console.log("Object newProfile is not empty");
+  }
+</script>

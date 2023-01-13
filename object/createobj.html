@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const startOne = performance.now();
+  // Using Class method
+  const obj1 = new Object();
+  obj1.name = "Mitesh";
+  obj1.city = "Mumbai";
+  obj1["state"] = "Maharashtra";
+  obj1[1] = "Active";
+
+  const endOne = performance.now();
+
+  console.log(`Call to doSomething took ${endOne - startOne} milliseconds.`);
+  // This is not allowed
+  //obj1.2 = "Active"
+
+  console.log("@AJ LN17 Obj1: ", obj1, obj1.name, obj1["city"]);
+
+  const startTwo = performance.now();
+  // Using {} way
+  const obj2 = {};
+  obj2.name = "Tanuj";
+  obj2.city = "Indore";
+  obj2["state"] = "MP";
+  obj2[1] = "Inactive";
+  const endTwo = performance.now();
+  console.log(`Call to doSomething took ${endTwo - startTwo} milliseconds.`);
+
+  console.log("@AJ LN31 Obj2: ", obj2, obj2.name, obj2["city"]);
+
+  // using Object create method
+  const obj3 = Object.create({});
+  obj3.name = "Rahul";
+  obj3.city = "Indore";
+  obj3["state"] = "MP";
+  obj3[1] = "Inactive";
+
+  console.log("@AJ LN31 Obj3: ", obj3, obj3.name, obj3["city"]);
+</script>

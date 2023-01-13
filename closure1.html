@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  /*   function myFun() {
+    const a = 1 + 1;
+    return a;
+  }
+  console.log(myFun());
+  console.log(myFun());
+  console.log(myFun());
+  console.log(myFun());
+  console.log(myFun());
+  console.log(myFun());
+  console.log(myFun());
+  console.log(myFun());
+  console.log(myFun());
+  console.log(myFun());
+  console.log(myFun());
+  console.log(myFun()); */
+
+  function myFunc() {
+    let a = 0;
+
+    function inner(i) {
+      a = a + i;
+      return a;
+    }
+    return inner;
+  }
+
+  const myF = myFunc();
+  console.log({ myF });
+
+  console.log(myF(1));
+  console.log(myF(1));
+  console.log(myF(1));
+  console.log(myF(1));
+  console.log(myF(1));
+  console.log(myF(1));
+  console.log(myF(1));
+  console.log(myF(1));
+  console.log(myF(1));
+</script>
+<!-- You need to create a Dmart Cart using closure
+
+The person should able add new products in the cart
+
+eg - 
+const myBasket = initCart()
+myBasket({id:1, name:'dabar hair oil'});
+myBasket({id:10, name:'milk rusk'});
+
+With every add, i should be able to see added products in a JSON array -->

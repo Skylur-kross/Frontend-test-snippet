@@ -1,0 +1,77 @@
+body{
+    margin: 0px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    height: 40px;
+    box-shadow: 2px 2px 2px #f0f0f0;
+}
+
+.headersearch{
+    width: 300px;
+    height: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: #f5f5f6;
+    border-radius: 5px;
+    font-size: 12px;
+    font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
+    color: rgb(142, 139, 139);
+    
+}
+.search{
+    width: 90%;
+    height: 25px;
+    background: transparent;
+    border: none;
+    outline-width: 0;
+    font: inherit;
+    padding: 8px 10px 10px;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #464648;
+}
+.title span{
+    font-size: 20px;
+    font-style: italic;
+    color: rgb(52, 49, 49);
+    font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
+}
+
+#productspage{
+    display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  
+  align-items: start;
+}
+.productscard{
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    font-style: italic;
+    color: rgb(52, 49, 49);
+    font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
+    box-shadow: 2px 2px 2px #464648;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+.cardimgdiv{
+   width: 150px;
+   height: 150px;
+   
+    align-self:center;
+}
+.cardimg{
+    max-width: 100%;
+        max-height: 100%;
+        display: block;
+}

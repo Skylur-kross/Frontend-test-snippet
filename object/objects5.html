@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const a = {
+    name: "Mitesh",
+    city: "Mumbai",
+    getName: function () {
+      return this.name;
+    },
+    getCity: () => {
+      return this.name;
+    },
+    details: {
+      address: "Kalyan",
+    },
+    createdAt: new Date(),
+  };
+const d = JSON.parse(JSON.stringify(a))
+console.log(d);
+const student = {
+    studentId: 1,
+    name: "Ankit Jain",
+    city: "Morena",
+    program: "CSE-2015",
+    name: "Mr. Ankit Jain",
+    name: "Mr. Ankit Jain(AJ)",
+  };
+
+  // Merge using assign
+  const merge1 = Object.assign(profile, student, { name: "AJ" });
+
+  // Merge using spread op
+  const merge2 = { ...profile, ...student, name: "MR.AJ", studentId: "NA" };
+
+  console.log({ merge1, merge2 });
+
+</script>
+</html>
