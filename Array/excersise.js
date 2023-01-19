@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-<script>
+
     // /////////////////////////////////////1st approach////////////////////////////////////
 //   let  input = [1,2,7,2,4,6,2];
 //     // K = 8
@@ -52,5 +41,3 @@
 
 
 // To find a first pair from a number array whose sum is K.
-</script>
-</html>
