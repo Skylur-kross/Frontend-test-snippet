@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const myPromise = () => {
+    const promise = new Promise((resolve, reject) => {
+      resolve("Executed successfully");
+    });
+
+    return promise;
+  };
+
+  //console.log(myPromise());
+
+  myPromise()
+    .then((data) => {
+      console.log("Data: ", data);
+    })
+    .catch((err) => {
+      console.log("Err: ", err);
+    });
+
+  myPromise()
+    .then((data) => {
+      console.log("Data: ", data);
+    })
+    .catch((err) => {
+      console.log("Err: ", err);
+    });
+
+  myPromise()
+    .then((data) => {
+      console.log("Data: ", data);
+    })
+    .catch((err) => {
+      console.log("Err: ", err);
+    });
+
+  myPromise()
+    .then((data) => {
+      console.log("Data: ", data);
+    })
+    .catch((err) => {
+      console.log("Err: ", err);
+    });
+
+  for (let i = 1; i < 10; i++) {
+    console.log("i: ", i);
+  }
+
+  (() => {
+    // Business logic to execute
+  })();
+
+  (function () {
+    // Business logic to execute
+  })();
+</script>

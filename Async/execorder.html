@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const p = () => {
+    return new Promise((accept, deny) => {
+        accept("0");
+    });
+  };
+  console.log("1");
+
+  let a = 10;
+  let b = 20;
+
+  console.log("2: ", a + b);
+
+  setTimeout(() => {
+    console.log("3");
+  }, 0);
+
+  p()
+    .then((data) => console.log(data))
+    .catch((err) => console.log(err));
+
+  console.log("4: ");
+
+  // 1,2,4,0,3 -- // 1,2,4,3,0
+</script>
