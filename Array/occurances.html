@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    const input = "aaaabbaaccccccccccccccccccde";
+
+    // Output
+    // {
+    //     character: 'c',
+    //     count: 18
+    // }
+    const result = (input,char) => {
+        let arr1 = input.split("");
+        let obj = {};
+        let output = [];
+        
+        
+        for (i = 0; i <= arr1.length; i++) {
+            let counter = 0;
+            for (j = 0; j <= arr1.length; j++) {
+                if (arr1[i] === arr1[j]) {
+                    counter += 1;
+                    obj[arr1[i]] = {
+                        character: arr1[i],
+                        count: counter
+                    }
+                }
+            }
+        }
+        return obj[char];
+    };
+    console.log(result(input,"b"));
+
+
+
+</script>
