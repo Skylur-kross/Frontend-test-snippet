@@ -21,20 +21,17 @@
     //     character: 'c',
     //     count: 18
     // }
-    const result = (input,char) => {
-        let arr1 = input.split("");
-        let obj = {};
-        let output = [];
-        
-        
-        for (i = 0; i <= arr1.length; i++) {
-            let counter = 0;
-            for (j = 0; j <= arr1.length; j++) {
-                if (arr1[i] === arr1[j]) {
-                    counter += 1;
-                    obj[arr1[i]] = {
-                        character: arr1[i],
-                        count: counter
+    const result = (inputString,char) => {
+        let array = inputString.split("");
+        let obj = {};  
+        for (i = 0; i <= array.length; i++) {
+            let occurance = 0;
+            for (j = 0; j <= array.length; j++) {
+                if (array[i] === array[j]) {
+                    occurance += 1;
+                    obj[array[i]] = {
+                        character: array[i],
+                        count: occurance
                     }
                 }
             }
