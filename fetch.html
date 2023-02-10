@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent" >
+
+    </div>
+    
+</body>
+</html>
+<style>
+    #parent{
+            display: grid;
+            gap: 30px;
+            /* flex-wrap: wrap; */
+            grid-template-columns: repeat(auto-fill, 260px);
+            
+        }
+        #parent div{
+            display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid silver;
+        padding: 8px;
+            /* width: 300px;
+            height: 300px; */
+        }
+        .items{
+            width: 200px;
+            height: 200px;
+        }
+</style>
+<script>
+   
+
+      const api_url = 
+      "https://fakestoreapi.com/products";
+  
+fetch(api_url)
+.then((response) => response.json())
+.then((data) => {
+      
+
+    const container = document.createDocumentFragment();
+    const content = document.createElement("div");
+   
+    for (let i = 0; i < data.length; i++) {
+        const id = data[i].id;
+        const price = data[i].price;
+        const title = data[i].title;
+        const image = data[i].image;
+        
+        
+
+            content.innerHTML += `<img src="${image}" class="items"><p>${title}</p><p>$${price}</p>  `;
+        container.appendChild(content);
+      
+    
+    }
+    
+    document.getElementById("parent").appendChild(container);
+ 
+    })
+    
+    
+</script>

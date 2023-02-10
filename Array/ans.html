@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+  let str = 'aaabbbcccccccccddddddddddddddddddddd';
+
+function maxOcc(str) {
+    let count = 0;
+    let map = {};
+    let char = '';
+    for (let i = 0; i < str.length; i++) {
+     
+        if (map[str[i]]) {
+            map[str[i]]++;
+        }
+        else map[str[i]] = 1
+        if (map[str[i]] > count) {
+            char = str[i]; count = map[str[i]]
+        }
+
+
+    }
+    console.log(map)
+    return { char, count }
+}
+console.log(maxOcc(str));
+</script>
